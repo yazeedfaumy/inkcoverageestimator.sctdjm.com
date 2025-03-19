@@ -1,0 +1,96 @@
+:root {
+  /* ... existing variables ... */
+}
+/* Responsive Containers */
+.container-fluid {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 640px) {
+  .container-fluid {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container-fluid {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+/* Grid System */
+.grid-responsive {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 640px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Card Styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm;
+  @apply p-4 md:p-6;
+}
+/* Form Controls */
+.form-input {
+  @apply w-full px-3 py-2;
+  @apply border border-gray-300 rounded-md;
+  @apply focus:ring-2 focus:ring-green-500 focus:border-green-500;
+}
+.form-select {
+  @apply w-full px-3 py-2;
+  @apply border border-gray-300 rounded-md;
+  @apply focus:ring-2 focus:ring-green-500 focus:border-green-500;
+  @apply bg-white;
+}
+/* Button Styles */
+.btn {
+  @apply px-4 py-2 rounded-md;
+  @apply transition-colors duration-200;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+.btn-primary {
+  @apply bg-green-600 text-white;
+  @apply hover:bg-green-700;
+  @apply focus:ring-green-500;
+}
+.btn-secondary {
+  @apply bg-yellow-500 text-yellow-900;
+  @apply hover:bg-yellow-600;
+  @apply focus:ring-yellow-500;
+}
+/* Layout Components */
+.main-content {
+  @apply flex-1 overflow-auto;
+  @apply p-4 md:p-6 lg:p-8;
+}
+.section-header {
+  @apply mb-6;
+}
+.section-header h1 {
+  @apply text-2xl font-semibold text-gray-900;
+  @apply mb-2;
+}
+.section-header p {
+  @apply text-sm text-gray-500;
+}
+/* Table Styles */
+.table-responsive {
+  @apply overflow-x-auto;
+  @apply -mx-4 md:mx-0;
+}
+/* Animation Utilities */
+.transition-smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
